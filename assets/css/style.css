@@ -1,7 +1,23 @@
-#homeTitle{
+.homeTitle{
     font-family: 'Chicle', cursive;
     font-size: 6rem;
 }
+
+#youTubeArea{
+    background-color: red;
+    width: 500px;
+}
+
+#giphyArea{
+    background-color: black;
+    height: 300px;
+}
+
+h2{
+    color: white;
+}
+
+
 
 
 
