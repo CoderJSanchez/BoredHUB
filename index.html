@@ -8,27 +8,28 @@
     <link href="https://fonts.googleapis.com/css?family=Chicle" rel="stylesheet">
     <link rel="stylesheet" type="text/css" media="screen" href="assets/css/bootstrap.min.css" />
     <link rel="stylesheet" href="assets/css/style.css">
+    <script src="https://www.gstatic.com/firebasejs/5.5.3/firebase.js"></script>
     <script src="assets/javascript/jquery.min.js"></script>
     
 </head>
 <body>
 <div class = "container-fluid">
-    <!-- <div class = "jumbotron"> -->
-        <!-- <h1 id = "homeTitle" class = "text-center">Bored Hub</h1> -->
-    <!-- </div> -->
-     <!-- <div class = 'row'>
-        <div class = 'col-md-12'>
-            <img class = 'img-fluid'  src="assets/images/demoImg.png" alt="demo">
-        </div>
-    </div> -->
-
     <div id = 'mainHeader'>
         <h1 class = 'homeTitle text-center'>Bored Hub</h1>
     </div>
+    <div>
+        <button type="button" class="btn btn-primary mr-1">Log In</button>
+        <button type="button" class="btn btn-primary"><a id = 'signUpButton' href = "signUp.html">Sign Up</a></button>
+
+    </div>
+    
     <div class = 'row'>
-        <div id = 'youTubeArea' class = 'col-md-12'>
+        <div id = 'youTubeTitle'>
+            <h5 class = 'lead'>Trending On YouTube</h5>
+        </div>
+        <div id = 'youTubeArea' class = 'col-md-12 pt-3 pb-3'>
             <div>
-                <div id = 'player' class = "offset-1"></div>
+                <div id = 'player'></div>
             </div>
         </div>
     </div>
@@ -37,15 +38,14 @@
     <div class = 'row'>
         <div id = 'giphyArea' class = 'col-md-12'>
             <div class = col-md-3>
-                <h2>Trending Gifs</h1>
+                
             </div>
             
         </div>
     </div>
-
-
-
 </div>
+
 <script src = 'assets/javascript/bored.js'></script>  
 </body>
 </html>
+
