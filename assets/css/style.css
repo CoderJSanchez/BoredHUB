@@ -1,7 +1,53 @@
-#homeTitle{
+body{
+    background-color: #ffbf00;
+}
+
+#signUpButton,
+#linkToLogIn{
+    color:white;
+    text-decoration: none;
+}
+#emailHelp{
+    color: white;
+}
+
+#signUpJumbotron{
+    background-color: blueviolet;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.homeTitle{
     font-family: 'Chicle', cursive;
     font-size: 6rem;
+    color: white;
 }
+
+.lead{
+    color: white;
+    font-weight: 400;
+}
+
+#youTubeArea{
+    background-color: red;
+    width: 500px;
+    overflow-x: scroll;
+    overflow-y: hidden;
+    white-space: nowrap;
+}
+
+#giphyArea{
+    background-color: black;
+    height: 300px;
+}
+
+h2{
+    color: white;
+}
+
+
 
 
 
