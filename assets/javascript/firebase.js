@@ -15,6 +15,7 @@
   var subBtn = $('#realSignUpButton');
   var logIn = $('#logInButton');
   var logOut = $('#logOutButton');
+  var favsBtn = $('#favsButton');
 
 
   //log in event
@@ -29,7 +30,7 @@
     promise.catch(e => console.log(e.message));
 
     //this should send user back to homepage after login
-    window.location.href="index.html";
+    //window.location.href="index.html";
   })
 
   //add signup event
@@ -42,6 +43,8 @@
     //sign in
     var promise = auth.createUserWithEmailAndPassword(email, password);
     promise.catch(e => console.log(e.message));
+    //this should send user back to homepage after login
+    window.location.href="index.html";
 
     //clear input fields
     var email = emailTxt.text('');
@@ -59,8 +62,12 @@
       if(firebaseUser) {
           console.log(firebaseUser);
           logOut.removeClass('invisible');
+          favsBtn.removeClass('invisible');
 
       }else{
           console.log('not logged in');
+          logOut.addClass('invisible');
+          favsBtn.addClass('invisible');
+
       }
   });

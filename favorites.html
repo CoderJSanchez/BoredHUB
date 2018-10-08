@@ -1,21 +1,38 @@
-<!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Favorites</title>
-    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
-    <!-- <link rel="stylesheet" href="assets/css/imager.css"> -->
-    <script src="assets/javascript/jquery.min.js"></script>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Favorites Page</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://fonts.googleapis.com/css?family=Chicle" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" media="screen" href="assets/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="assets/css/style.css">
     <script src="https://www.gstatic.com/firebasejs/5.5.3/firebase.js"></script>
-    <script src="assets/javascript/favorites.js" defer></script>
+    <script src="assets/javascript/jquery.min.js"></script>
+    
 </head>
-
 <body>
-    <div class="container">
-        <div class="row" id="favs">
-            <!-- jQuery will fill this up -->
-        </div>
+<div class = "container-fluid">
+    <div id = 'mainHeader'>
+        <h1 class = 'homeTitle text-center'>Bored Hub</h1>
     </div>
+    <div>
+        <button id = 'logIn' type="button" class="btn btn-primary mr-1"><a id = 'linkToLogIn' href = "login.html">Log In</a></button>
+        <button id = 'signUp' type="button" class="btn btn-primary"><a id = 'signUpButton' href = "signUp.html">Sign Up</a></button>
+        <button id = 'logOutButton' class = 'btn btn-danger invisible '>Log Out</button>
+        <button id = 'favsButton' type="button" class="btn btn-primary invisible"><a id = 'linkToFavs' href = "favorites.html">Sign Up</a></button>
+
+    </div>
+
+    <!-- <a href="index.html"></a> -->
+    <div class="row" id="favs">
+        <!-- jQuery will fill this up -->
+    </div>
+
+
+<script src = 'assets/javascript/bored.js'></script>  
+<script src = 'assets/javascript/firebase.js'></script>
+<script src = 'assets/javascript/favorites.js'></script>
 </body>
+</html>
+
