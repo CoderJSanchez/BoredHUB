@@ -3,7 +3,8 @@ body{
 }
 
 #signUpButton,
-#linkToLogIn{
+#linkToLogIn,
+#linkToFavs{
     color:white;
     text-decoration: none;
 }
