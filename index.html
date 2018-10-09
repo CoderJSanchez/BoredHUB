@@ -13,21 +13,25 @@
     
 </head>
 <body>
+<!-- As a heading -->
+<nav class="navbar navbar-light bg-light">
+     <span id = 'showUserName'class="navbar-brand mb-0 h1"></span>
+</nav>
 <div class = "container-fluid">
     <div id = 'mainHeader'>
         <h1 class = 'homeTitle text-center'>Bored Hub</h1>
     </div>
     <div>
-        <button id = 'logIn' type="button" class="btn btn-primary mr-1"><a id = 'linkToLogIn' href = "login.html">Log In</a></button>
-        <button id = 'signUp' type="button" class="btn btn-primary"><a id = 'signUpButton' href = "signUp.html">Sign Up</a></button>
+        <a id = 'linkToLogIn' href = "logIn.html"><button id = 'logIn' type="button" class="btn btn-primary mr-1 invisible">Log In</button></a>
+        <a id = 'signUpButton' href = "signUp.html"><button id = 'signUp' type="button" class="btn btn-primary invisible">Sign Up</button></a>
         <button id = 'logOutButton' class = 'btn btn-danger invisible '>Log Out</button>
-        <button id = 'favsButton' type="button" class="btn btn-primary invisible"><a id = 'linkToFavs' href = "favorites.html">My Favorities</a></button>
+        <a id = 'linkToFavs' href = "favorites.html"><button id = 'favsButton' type="button" class="btn btn-primary invisible">My Favorities</button></a>
 
     </div>
     
     <div class = 'row'>
         <div id = 'youTubeTitle'>
-            <h5 class = 'lead'>Trending On YouTube</h5>
+            <h5 class = 'lead mt-4'>Trending On YouTube</h5>
         </div>
         <div id = 'youTubeArea' class = 'col-md-12 pt-3 pb-3'>
             <div>
