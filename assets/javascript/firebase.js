@@ -17,7 +17,8 @@
   var logOut = $('#logOutButton');
   var favsBtn = $('#favsButton');
   var hideLogIn = $('#logIn');
-  var hideSignUp = $('#signUp')
+  var hideSignUp = $('#signUp');
+  var usernameTxt = $('#userName');
 
 
   //log in event
@@ -50,28 +51,48 @@
     //get email and password text
     var email = emailTxt.val().trim();
     var password = passTxt.val().trim();
+    var username = usernameTxt.val();
+    console.log(username);
     var auth = firebase.auth();
 
-    //sign in
-    var promise = auth.createUserWithEmailAndPassword(email, password);
+    //sign up
+    var promise = auth.createUserWithEmailAndPassword(email, password)
+    //gets info on current user
+    .then(function () {
+        promise = firebase.auth().currentUser;
+     })
+     //updates current profile
+    .then(function () {
+        promise.updateProfile({
+          displayName: username
+        });
+      });
     promise.catch(e => console.log(e.message));
+
     //this will call returnHome() and should send user back to homepage after login
-    setTimeout(returnHome, 1000);
+    setTimeout(returnHome, 3000);
   });
 
-  //Logout the user
-  logOut.on('click', function(){
-      firebase.auth().signOut();
-      window.location.reload();
-  });
+
+//Logout the user
+    logOut.on('click', function(){
+    firebase.auth().signOut();
+    window.location.reload();
+});
 
 
   //add a realtime listener
   firebase.auth().onAuthStateChanged(firebaseUser => {
       if(firebaseUser) {
           console.log(firebaseUser);
+          console.log(firebaseUser.displayName);
+          console.log(firebaseUser.email);
           logOut.removeClass('invisible');
           favsBtn.removeClass('invisible');
+
+          var showUser = $('<p>');
+          showUser.text(`Hello, ${firebaseUser.displayName}`);
+          $('#showUserName').append(showUser);
           
           
       }else{
