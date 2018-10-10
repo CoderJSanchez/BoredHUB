@@ -7,6 +7,7 @@ body{
 #linkToFavs{
     color:white;
     text-decoration: none;
+    
 }
 #emailHelp{
     color: white;
@@ -41,6 +42,28 @@ label{
 .lead{
     color: white;
     font-weight: 400;
+    -webkit-text-stroke: .3px black;
+   color: white;
+   text-shadow:
+       1px 2px 0 #000,
+     -1px -1px 0 #000,  
+      1px -1px 0 #000,
+      -1px 1px 0 #000,
+       1px 1px 0 #000;
+}
+
+
+.lead_2{
+    color: white;
+    font-weight: 400;
+    -webkit-text-stroke: .3px black;
+   color: rgb(226, 23, 233);
+   text-shadow:
+       1px 2px 0 #000,
+     -1px -1px 0 #000,  
+      1px -1px 0 #000,
+      -1px 1px 0 #000,
+       1px 1px 0 #000;
 }
 
 #youTubeArea{
@@ -49,6 +72,11 @@ label{
     overflow-x: scroll;
     overflow-y: hidden;
     white-space: nowrap;
+    
+}
+
+.fab  {
+    color: red;
 }
 
 #giphyArea{
@@ -63,5 +91,7 @@ label{
 h2{
     color: white;
 }
+
+
 
 /* Netflixy Slideshow */
