@@ -32,18 +32,16 @@
     var promise = auth.signInWithEmailAndPassword(email, password);
     promise.catch(e => console.log(e.message));
     //allows firebase time to log in the user
-    setTimeout(returnHome, 1000);  
+    setTimeout(returnHome, 2000);  
   });
   //allows the page to return to index signed in
   function returnHome(){
-      if(passTxt.val().length > 5){
+      if(passTxt.val().length >= 6){
         window.location.href = 'index.html';
       }else{
           alert("password not long enough");
-      }
-      
+      }    
   }
-
 
   //add signup event
   subBtn.on('click', function(e){
@@ -70,7 +68,7 @@
     promise.catch(e => console.log(e.message));
 
     //this will call returnHome() and should send user back to homepage after login
-    setTimeout(returnHome, 3000);
+    setTimeout(returnHome, 2000);
   });
 
 
@@ -81,7 +79,7 @@
 });
 
 
-  //add a realtime listener
+  //Realtime listener
   firebase.auth().onAuthStateChanged(firebaseUser => {
       if(firebaseUser) {
           console.log(firebaseUser);
@@ -89,18 +87,16 @@
           console.log(firebaseUser.email);
           logOut.removeClass('invisible');
           favsBtn.removeClass('invisible');
-
+          //create <p> and display username on DOM if user exists.
           var showUser = $('<p>');
           showUser.text(`Hello, ${firebaseUser.displayName}`);
           $('#showUserName').append(showUser);
-          
-          
+  
       }else{
           console.log('not logged in');
           logOut.addClass('invisible');
           favsBtn.addClass('invisible');
           hideLogIn.removeClass('invisible');
-          hideSignUp.removeClass('invisible');
-          
+          hideSignUp.removeClass('invisible');  
       }
   });

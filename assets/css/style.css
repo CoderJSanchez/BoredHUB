@@ -45,15 +45,15 @@ label{
 
 #giphyArea{
     background-color: black;
-    height: 300px;
+    height: 250px;
+    overflow-x: scroll;
+    overflow-y: hidden;
+    white-space: nowrap;
+    margin-bottom: 100px;
 }
 
 h2{
     color: white;
 }
 
-
-
-
-
-
+/* Netflixy Slideshow */
