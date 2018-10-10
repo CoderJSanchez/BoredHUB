@@ -49,7 +49,17 @@ label{
     overflow-x: scroll;
     overflow-y: hidden;
     white-space: nowrap;
-    margin-bottom: 100px;
+    margin-bottom: 20px;
+}
+
+#chuckArea{
+    background-color: blue;  
+    margin: 0;
+    padding: 0;
+}
+
+.chuckLetters{
+    color: white;
 }
 
 h2{

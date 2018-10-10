@@ -3,7 +3,26 @@ var youTubeAPI = 'https://www.googleapis.com/youtube/v3/videos?part=contentDetai
 addFive
 +'&key=AIzaSyCvAof6vnksRm0H8YC_dL2i3VLhr3cfU48';
 var giphyAPI = "https://api.giphy.com/v1/gifs/trending?api_key=fDL5v4XFp5pWQ4sKnSa55JNFVuzF0LSq&limit=" + addFive;
+var randomChuckCatagories = [
+    "dev",
+    "movie",
+    "food",
+    "celebrity",
+    "science",
+    "sport",
+    "political",
+    "religion",
+    "animal",
+    "history",
+    "music",
+    "travel",
+    "career",
+    "money",
+    ];
 
+var pickRandom =randomChuckCatagories[Math.floor(Math.random() * randomChuckCatagories.length)];
+console.log("this is pickrandom " + pickRandom);
+var callChuckAPI = 'https://api.chucknorris.io/jokes/search?query='+pickRandom;
 
 function callYT(){
     $.ajax({
@@ -42,8 +61,43 @@ function callGiphy() {
     });
 }
 
+
+function callChuck() {
+    $.ajax({
+        url: callChuckAPI,
+        method: 'GET'
+    }).then(function(response) {
+        console.log(response);
+        for(var i = 0; i < 4; i++){
+            var chucks = $('<div>');
+            chucks.addClass('col-md-3');
+
+            var chuckImg = $('<img>');
+            chuckImg.addClass('img-fluid');
+            chuckImg.attr('src', response.result[i].icon_url)
+           
+            var chuckWords = $('<p>');
+            chuckWords.addClass('chuckLetters');
+            chuckWords.text(response.result[i].value);
+            chucks.append(chuckImg, chuckWords);
+
+            $('#dropChuckSayings').append(chucks);
+            console.log(response.result[0]);
+            console.log(response.result[i].value);
+        }
+        
+    });
+    $('#randomizeChucks').on('click', function(){
+        callChuck();
+    })
+
+}
+
+
+
 callYT();
 callGiphy();
+callChuck();
 
 
 

@@ -26,14 +26,12 @@
         <a id = 'signUpButton' href = "signUp.html"><button id = 'signUp' type="button" class="btn btn-primary invisible">Sign Up</button></a>
         <button id = 'logOutButton' class = 'btn btn-danger invisible '>Log Out</button>
         <a id = 'linkToFavs' href = "favorites.html"><button id = 'favsButton' type="button" class="btn btn-primary invisible">My Favorities</button></a>
-
     </div>
+    <br>
     
     <div class = 'row'>
-        <div id = 'youTubeTitle'>
-            <h5 class = 'lead mt-4'>Trending On YouTube</h5>
-        </div>
-        <div id = 'youTubeArea' class = 'col-md-12 pt-3 pb-3'>
+        <div id = 'youTubeArea' class = 'col-md-12 pt-1 pb-1'>
+                <h5 id = "youTubeTitle" class = 'lead'>Trending On YouTube</h5>
             <div>
                 <div id = 'player'></div>
             </div>
@@ -50,7 +48,12 @@
             
         </div>
     </div>
-</div>
+
+    <div id = "chuckArea">
+            <button id = 'randomizeChucks' type="button" class="btn btn-outline-danger">Get Random Chucks</button>
+        <div id = "dropChuckSayings" class = 'row'></div>
+    </div>
+</div><!--End of Container-->
 
 <script src = 'assets/javascript/index.js'></script>  
 <script src = 'assets/javascript/firebase.js'></script>
