@@ -11,8 +11,6 @@ function callYT(){
         method: 'GET'
     }).then(function(response){
         console.log(response);
-        // var firstVid = response.items[0].id;
-        // console.log(firstVid);
     
         for (let i = 0; i < response.items.length; i++){
             var makeiFrame = $('<iframe>');
@@ -21,8 +19,8 @@ function callYT(){
             makeiFrame.attr('height', 'auto');
             makeiFrame.attr('src', 'https://www.youtube.com/embed/' + response.items[i].id);
             makeiFrame.attr('frameborder', '0');
-            makeiFrame.attr('allow', 'autoplay');
-            makeiFrame.attr("allowfullscreen");
+            makeiFrame.attr('allow', 'autoplay; encrypted-media');
+            makeiFrame.attr("allowfullscreen", true );
             $('#player').append(makeiFrame);
     
         }
@@ -46,6 +44,8 @@ function callGiphy() {
 
 callYT();
 callGiphy();
+
+
 
 
 
