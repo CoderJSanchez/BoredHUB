@@ -3,6 +3,10 @@ nav{
     background-color: #ffbf00;
 }
 
+.titleToHome{
+    text-decoration: none;
+}
+
 #signUpButton,
 #linkToLogIn,
 #linkToFavs{
@@ -29,6 +33,7 @@ label{
     font-family: 'Chicle', cursive;
     font-size: 6rem;
     color: white;
+    text-decoration: none;
 }
 
 .lead{
