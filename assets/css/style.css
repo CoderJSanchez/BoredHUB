@@ -1,5 +1,5 @@
 body{
-    background-color: #ffbf00;
+    background-image: url("https://i.pinimg.com/originals/09/d9/67/09d967920db4d5d77f818d86493366bb.jpg");
 }
 
 #signUpButton,
@@ -24,6 +24,18 @@ label{
     justify-content: center;
     align-items: center;
 }
+/* sign up page text title */
+.text-center {
+    color: white;
+    -webkit-text-stroke: 1px black;
+   color: white;
+   text-shadow:
+       3px 3px 0 #000,
+     -1px -1px 0 #000,  
+      1px -1px 0 #000,
+      -1px 1px 0 #000,
+       1px 1px 0 #000;
+}
 
 .homeTitle{
     font-family: 'Chicle', cursive;
@@ -39,6 +51,8 @@ label{
        1px 1px 0 #000;
 }
 
+/* youtube title text */
+
 .lead{
     color: white;
     font-weight: 400;
@@ -53,19 +67,6 @@ label{
 }
 
 
-.lead_2{
-    color: white;
-    font-weight: 400;
-    -webkit-text-stroke: .3px black;
-   color: rgb(226, 23, 233);
-   text-shadow:
-       1px 2px 0 #000,
-     -1px -1px 0 #000,  
-      1px -1px 0 #000,
-      -1px 1px 0 #000,
-       1px 1px 0 #000;
-}
-
 #youTubeArea{
     background-color: red;
     width: 500px;
@@ -75,8 +76,25 @@ label{
     
 }
 
+/* youtube icon button */
+
 .fab  {
     color: red;
+}
+
+/* giphy title text*/
+
+.lead_2{
+    color: white;
+    font-weight: 400;
+    -webkit-text-stroke: .3px black;
+   color: white;
+   text-shadow:
+       1px 2px 0 #000,
+     -1px -1px 0 #000,  
+      1px -1px 0 #000,
+      -1px 1px 0 #000,
+       1px 1px 0 #000;
 }
 
 #giphyArea{
@@ -88,10 +106,21 @@ label{
     margin-bottom: 100px;
 }
 
+/*giphy icon button */
+
+.fas {
+    color: rgb(173, 66, 244);
+}
+
 h2{
     color: white;
 }
 
+/* favorites icon color*/
+
+.fa {
+    color:rgb(219, 24, 37);
+}
 
 
 /* Netflixy Slideshow */
