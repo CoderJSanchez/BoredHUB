@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html>
+
 <head>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -10,53 +11,59 @@
     <link rel="stylesheet" href="assets/css/style.css">
     <script src="https://www.gstatic.com/firebasejs/5.5.3/firebase.js"></script>
     <script src="assets/javascript/jquery.min.js"></script>
-    
+
 </head>
+
 <body>
-<!-- As a heading -->
-<nav class="navbar navbar-light bg-light">
-     <span id = 'showUserName'class="navbar-brand mb-0 h1"></span>
-</nav>
-<div class = "container-fluid">
-    <div id = 'mainHeader'>
-        <h1 class = 'homeTitle text-center'>Bored Hub</h1>
-    </div>
-    <div>
-        <a id = 'linkToLogIn' href = "logIn.html"><button id = 'logIn' type="button" class="btn btn-primary mr-1 invisible">Log In</button></a>
-        <a id = 'signUpButton' href = "signUp.html"><button id = 'signUp' type="button" class="btn btn-primary invisible">Sign Up</button></a>
-        <button id = 'logOutButton' class = 'btn btn-danger invisible '>Log Out</button>
-        <a id = 'linkToFavs' href = "favorites.html"><button id = 'favsButton' type="button" class="btn btn-primary invisible">My Favorities</button></a>
-    </div>
-    <br>
-    
-    <div class = 'row'>
-        <div id = 'youTubeArea' class = 'col-md-12 pt-1 pb-1'>
-                <h5 id = "youTubeTitle" class = 'lead'>Trending On YouTube</h5>
-            <div>
-                <div id = 'player'></div>
+    <!-- As a heading -->
+    <nav class="navbar navbar-light bg-light">
+        <span id='showUserName' class="navbar-brand mb-0 h1"></span>
+    </nav>
+    <div class="container-fluid">
+        <div id='mainHeader'>
+            <h1 class='homeTitle text-center'>Bored Hub</h1>
+        </div>
+        <div>
+            <a id='linkToLogIn' href="logIn.html"><button id='logIn' type="button" class="btn btn-primary mr-1 invisible">Log
+                    In</button></a>
+            <a id='signUpButton' href="signUp.html"><button id='signUp' type="button" class="btn btn-primary invisible">Sign
+                    Up</button></a>
+            <button id='logOutButton' class='btn btn-danger invisible '>Log Out</button>
+            <a id='linkToFavs' href="favorites.html"><button id='favsButton' type="button" class="btn btn-primary invisible">My
+                    Favorities</button></a>
+        </div>
+        <br>
+
+        <div class='row'>
+            <div id='youTubeArea' class='col-md-12 pt-1 pb-1'>
+                <h5 id="youTubeTitle" class='lead'>Trending On YouTube</h5>
+                <div>
+                    <div id='player'></div>
+                </div>
+            </div>
+        </div>
+        <br>
+
+        <div class='row'>
+            <div id='giphyArea' class='col-md-12'>
+                <h5 class="lead">Trending on Giphy</h5>
+                <div class=col-md-3>
+
+                </div>
+
+            </div>
+        </div>
+        <div class="row">
+            <div id="chuckArea">
+                <button id='randomizeChucks' type="button" class="btn btn-outline-danger">Get Random Chucks</button>
+                <div id="dropChuckSayings" class='row'></div>
             </div>
         </div>
     </div>
-    <br>
+    <!--End of Container-->
 
-    <div class = 'row'>
-        <div id = 'giphyArea' class = 'col-md-12'>
-            <h5 class="lead">Trending on Giphy</h5>
-            <div class = col-md-3>
-                
-            </div>
-            
-        </div>
-    </div>
-
-    <div id = "chuckArea">
-            <button id = 'randomizeChucks' type="button" class="btn btn-outline-danger">Get Random Chucks</button>
-        <div id = "dropChuckSayings" class = 'row'></div>
-    </div>
-</div><!--End of Container-->
-
-<script src = 'assets/javascript/index.js'></script>  
-<script src = 'assets/javascript/firebase.js'></script>
+    <script src='assets/javascript/index.js'></script>
+    <script src='assets/javascript/firebase.js'></script>
 </body>
-</html>
 
+</html>

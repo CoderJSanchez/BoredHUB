@@ -20,7 +20,7 @@
   var hideSignUp = $('#signUp');
   var usernameTxt = $('#userName');
 
-
+  
   //log in event
   logIn.on('click', function(e){
     e.preventDefault();
@@ -31,15 +31,23 @@
     //sign in
     var promise = auth.signInWithEmailAndPassword(email, password);
     promise.catch(e => console.log(e.message));
+
+    if(email != firebase.auth() || password != firebase.auth() ){
+       
+        emailTxt.val('');
+        passTxt.val('');
+    }
     //allows firebase time to log in the user
     setTimeout(returnHome, 2000);  
   });
+
   //allows the page to return to index signed in
   function returnHome(){
-      if(passTxt.val().length >= 6){
-        window.location.href = 'index.html';
+      if(passTxt.val().length < 6){
+        $('#longerPass').removeClass('invisible');
       }else{
-          alert("password not long enough");
+        window.location.href = 'index.html';
+          
       }    
   }
 
