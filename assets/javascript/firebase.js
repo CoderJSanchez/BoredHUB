@@ -36,9 +36,9 @@ logIn.on('click', function (e) {
     //     setTimeout(returnHome, 2000); 
     // }
 
-    if (email != firebase.auth() || password != firebase.auth()) {
-        $('#errorText').removeClass('invisible');
-    }
+    // if (email != firebase.auth() || password != firebase.auth()) {
+    //     $('#errorText').removeClass('invisible');
+    // }
 
 
     //}else{
