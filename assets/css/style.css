@@ -37,16 +37,17 @@ label{
 
 #youTubeArea{
     background-color: red;
-    width: 500px;
+    /* max-width: 1200px; */
     /* overflow-x: scroll; */
     overflow-y: hidden;
-    white-space: nowrap;
+    /* white-space: nowrap; */
     position: relative;
 }
 
 #player {
+    position: relative;
+    max-width: 1400px;
     margin: 0 auto;
-    display: inline-block;
 }
 
 #giphyArea{
