@@ -90,6 +90,9 @@ function minusYTSlides() {
 }
 
 function giphyInit() {
+    // offset += 3;
+    // giphyAPIWithOffset = giphyAPI + "&offset=" + offset;
+    // console.log(offset);
     $.ajax({
         url: giphyAPI,
         method: 'GET'
@@ -100,10 +103,48 @@ function giphyInit() {
             $(image).attr("alt", "Hilarious GIF!");
             $("#images").append(image);
         }
-
-        offset += 3;
-        giphyAPIWithOffset = giphyAPI + "&offset=" + offset;
     });
+}
+
+function plusGSlides() {
+    offset += 3;
+    giphyAPIWithOffset = giphyAPI + "&offset=" + offset;
+    console.log(offset);
+    $.ajax({
+        url: giphyAPIWithOffset,
+        method: 'GET'
+    }).then(function(response) {
+        $("#images").empty();
+        for(let i = 0; i < 3; i++) {
+            let image = $("<img>");
+            $(image).attr("src", response.data[i].images.fixed_height.url);
+            $(image).attr("alt", "Hilarious GIF!");
+            $("#images").append(image);
+        }
+
+        
+    });
+}
+
+function minusGSlides() {    
+    if(offset > 0){
+        offset -= 3;
+        giphyAPIWithOffset = giphyAPI + "&offset=" + offset;
+        $.ajax({
+            url: giphyAPIWithOffset,
+            method: 'GET'
+        }).then(function(response) {
+            $("#images").empty();
+            for(let i = 0; i < 3; i++) {
+                let image = $("<img>");
+                $(image).attr("src", response.data[i].images.fixed_height.url);
+                $(image).attr("alt", "Hilarious GIF!");
+                $("#images").append(image);
+            }
+
+            
+        });
+    }
 }
 
 YTinit();
