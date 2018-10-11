@@ -107,7 +107,7 @@ label{
 
 #giphyArea{
     background-color: black;
-    height: 250px;
+    height: 300px;
     /* overflow-x: scroll; */
     overflow-y: hidden;
     /* white-space: nowrap; */
@@ -164,4 +164,9 @@ h2{
 
 #Gnext, #Gprev {
     background-color: white;
+}
+
+.image-holder {
+    position: relative;
+    float: left;
 }

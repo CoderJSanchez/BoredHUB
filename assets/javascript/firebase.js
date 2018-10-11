@@ -91,6 +91,7 @@
           var showUser = $('<p>');
           showUser.text(`Hello, ${firebaseUser.displayName}`);
           $('#showUserName').append(showUser);
+          usernameTxt = firebaseUser.displayName;
   
       }else{
           console.log('not logged in');
