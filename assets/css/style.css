@@ -1,4 +1,5 @@
-body{
+body,
+nav{
     background-color: #ffbf00;
 }
 
@@ -64,6 +65,10 @@ label{
 
 h2{
     color: white;
+}
+
+#errorText{
+    color: red;
 }
 
 /* Netflixy Slideshow */

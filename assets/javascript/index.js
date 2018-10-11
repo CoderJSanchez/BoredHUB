@@ -77,7 +77,7 @@ function callChuck() {
         var chuckArray = [];
         chuckArray.push(response);
         console.log("this is the array" + chuckArray);
-        
+
         for (var i = 0; i < showTheseChucks; i++) {
             var chucks = $('<div>');
             chucks.addClass('col-md-3');
@@ -93,15 +93,15 @@ function callChuck() {
 
             $('#dropChuckSayings').append(chucks);
             //console.log(response.result[0]);
-           // console.log(response.result[i].value);
+            // console.log(response.result[i].value);
 
         }
         $('#randomizeChucks').on('click', function () {
             // showTheseChucks += 4;
             callChuck();
         })
-    
-        
+
+
 
     });
 

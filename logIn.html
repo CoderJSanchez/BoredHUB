@@ -10,64 +10,47 @@
     <link rel="stylesheet" type="text/css" media="screen" href="assets/css/bootstrap.min.css" />
     <link rel="stylesheet" href="assets/css/style.css">
     <script src="https://www.gstatic.com/firebasejs/5.5.3/firebase.js"></script>
-    <script src="assets/javascript/jquery.min.js"></script>
-
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 </head>
 
 <body>
-    <!-- Modal -->
-    <div id = 'myModal'>
-<div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
-        <div class="modal-dialog modal-dialog-centered" role="document">
-          <div class="modal-content">
-            <div class="modal-header">
-              <h5 class="modal-title" id="exampleModalLongTitle">Modal title</h5>
-              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                <span aria-hidden="true">&times;</span>
-              </button>
-            </div>
-            <div class="modal-body">
-              ...
-            </div>
-            <div class="modal-footer">
-              <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-              <button type="button" class="btn btn-primary">Save changes</button>
-            </div>
-          </div>
+    <div class='container'>
+        <div id='mainHeader'>
+            <h1 class='homeTitle text-center'>Bored Hub</h1>
         </div>
-      </div>
-      </div>
-<div class = 'container'>
-        <div id = 'mainHeader'>
-            <h1 class = 'homeTitle text-center'>Bored Hub</h1>
-        </div>
-        <h1 class = 'text-center'>Log In Page</h1>
-    <div id = 'signUpJumbotron' class = 'jumbotron'>
-    <form>
-        <div class="form-group">
-            <label for="exampleInputEmail1">Email address</label>
-            <input id = 'emailInput'type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
-            <small id="emailHelp" class="form-text">We'll never share your email with anyone else.</small>
-        </div>
-        <div class="form-group">
-            <label for="exampleInputPassword1">Password</label>
-            <input id = "passwordInput" type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
-        </div>
-        <button id = "logInButton" type="submit" class="btn btn-primary">Log In</button>
-        <a href="index.html">Back Home</a>
-        
-        <div>
-            <br>
-            <p>Not Registered?  <a href = "signUp.html">Sign Up Here.</a></p>
-        </div>
-    </form>
-    
-    
-</div><!--End of Jumbotron-->
-</div><!--End of Container-->
-<!--Modal Area-->
+        <h1 class='text-center'>Log In Page</h1>
+        <div id='signUpJumbotron' class='jumbotron'>
+            <form>
+                <div class="form-group">
+                    <label for="exampleInputEmail1">Email address</label>
+                    <input id='emailInput' type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"
+                        placeholder="Enter email">
+                    <small id="emailHelp" class="form-text">We'll never share your email with anyone else.</small>
+                </div>
+                <div class="form-group">
+                    <label for="exampleInputPassword1">Password</label>
+                    <input id="passwordInput" type="password" class="form-control" id="exampleInputPassword1"
+                        placeholder="Password">
+                </div>
+                <button id="logInButton" type="submit" class="btn btn-primary" data-toggle="modal">Log In</button>
+                <small id='errorText' class='form-text invisible'>There is no user record corresponding to this
+                    identifier.</small>
+                <a href="index.html">Back Home</a>
 
-    <script src = 'assets/javascript/firebase.js'></script>
+                <div>
+                    <br>
+                    <p>Not Registered? <a href="signUp.html">Sign Up Here.</a></p>
+                </div>
+            </form>
+
+
+        </div>
+        <!--End of Jumbotron-->
+    </div>
+    <!--End of Container-->
+    <!--Modal Area-->
+
+    <script src='assets/javascript/firebase.js'></script>
     <script src='assets/javascript/bored.js'></script>
 </body>
 

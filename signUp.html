@@ -15,35 +15,39 @@
 </head>
 
 <body>
-<div class = 'container'>
-        <div id = 'mainHeader'>
-                <h1 class = 'homeTitle text-center'>Bored Hub</h1>
-            </div>
-            <h1 class = 'text-center'>Sign Up Page</h1>
-    <div id = 'signUpJumbotron' class = 'jumbotron'>   
-    <form>
-        <div class="form-group">
-            <label for="exampleInputEmail1">Username</label>
-            <input id = 'userName'type="text" class="form-control" aria-describedby="username" placeholder="Enter Username">
+    <div class='container'>
+        <div id='mainHeader'>
+            <h1 class='homeTitle text-center'>Bored Hub</h1>
         </div>
-        <div class="form-group">
-            <label for="exampleInputEmail1">Email address</label>
-            <input id = 'emailInput'type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
-            <small id="emailHelp" class="form-text">We'll never share your email with anyone else.</small>
+        <h1 class='text-center'>Sign Up Page</h1>
+        <div id='signUpJumbotron' class='jumbotron'>
+            <form>
+                <div class="form-group">
+                    <label for="exampleInputEmail1">Username</label>
+                    <input id='userName' type="text" class="form-control" aria-describedby="username" placeholder="Enter Username">
+                </div>
+                <div class="form-group">
+                    <label for="exampleInputEmail1">Email address</label>
+                    <input id='emailInput' type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"
+                        placeholder="Enter email">
+                    <small id="emailHelp" class="form-text">We'll never share your email with anyone else.</small>
+                </div>
+                <div class="form-group">
+                    <label for="exampleInputPassword1">Password</label>
+                    <input id="passwordInput" type="password" class="form-control" id="exampleInputPassword1"
+                        placeholder="six or more characters">
+                </div>
+                <div>
+                    <small id='errorText' class='form-text invisible'>Password should be at least 6 characters.</small>
+                </div>
+                <button id="realSignUpButton" type="submit" class="btn btn-primary">Sign Up</button>
+                <a href="index.html">Back Home</a>
+            </form>
         </div>
-        <div class="form-group">
-            <label for="exampleInputPassword1">Password</label>
-            <input id = "passwordInput" type="password" class="form-control" id="exampleInputPassword1" placeholder="six or more characters">
-        </div>
-        <div>
-            <p id = "longerPass" class = 'invisible'>PASS WORD NOT LONG ENOUGH</p>
-        </div>
-        <button id = "realSignUpButton" type="submit" class="btn btn-primary">Sign Up</button>
-        <a href="index.html">Back Home</a>
-    </form>
-</div><!--End of Jumbotron-->
-</div><!--End of Container-->
-    <script src = 'assets/javascript/firebase.js'></script>
+        <!--End of Jumbotron-->
+    </div>
+    <!--End of Container-->
+    <script src='assets/javascript/firebase.js'></script>
     <script src='assets/javascript/bored.js'></script>
 </body>
 
