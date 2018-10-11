@@ -53,10 +53,17 @@ label{
 #giphyArea{
     background-color: black;
     height: 250px;
-    overflow-x: scroll;
+    /* overflow-x: scroll; */
     overflow-y: hidden;
-    white-space: nowrap;
+    /* white-space: nowrap; */
     margin-bottom: 100px;
+    position: relative;
+}
+
+#images {
+    position: relative;
+    max-width: 1000px;
+    margin: 0 auto;
 }
 
 h2{
@@ -85,4 +92,8 @@ h2{
 
 .prev:hover, .next:hover {
     background-color: rgba(0,0,0,0.8);
+}
+
+#Gnext, #Gprev {
+    background-color: white;
 }

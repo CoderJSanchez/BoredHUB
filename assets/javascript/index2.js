@@ -4,11 +4,14 @@ addFive
 +'&key=AIzaSyCvAof6vnksRm0H8YC_dL2i3VLhr3cfU48';
 var youTubeAPINext = youTubeAPI;
 var youTubeAPIPrev = youTubeAPI;
-var giphyAPI = "https://api.giphy.com/v1/gifs/trending?api_key=fDL5v4XFp5pWQ4sKnSa55JNFVuzF0LSq&limit=" + addFive;
 var index = 0;
 var nextToken = "";
 var prevToken = "";
 var hasPrevToken = false;
+
+var giphyAPI = "https://api.giphy.com/v1/gifs/trending?api_key=fDL5v4XFp5pWQ4sKnSa55JNFVuzF0LSq&limit=3";
+var giphyAPIWithOffset = giphyAPI;
+var offset = 0;
 
 function YTinit() {
     $.ajax({
@@ -86,7 +89,25 @@ function minusYTSlides() {
     }
 }
 
+function giphyInit() {
+    $.ajax({
+        url: giphyAPI,
+        method: 'GET'
+    }).then(function(response) {
+        for(let i = 0; i < 3; i++) {
+            let image = $("<img>");
+            $(image).attr("src", response.data[i].images.fixed_height.url);
+            $(image).attr("alt", "Hilarious GIF!");
+            $("#images").append(image);
+        }
+
+        offset += 3;
+        giphyAPIWithOffset = giphyAPI + "&offset=" + offset;
+    });
+}
+
 YTinit();
+giphyInit();
 
 $("#YTnext").on("click", function() {
     plusYTSlides();
@@ -94,4 +115,12 @@ $("#YTnext").on("click", function() {
 
 $("#YTprev").on("click", function() {
     minusYTSlides();
+});
+
+$("#Gnext").on("click", function() {
+    plusGSlides();
+});
+
+$("#Gprev").on("click", function() {
+    minusGSlides();
 });
