@@ -2,6 +2,14 @@ body{
     background-image: url("https://i.pinimg.com/originals/09/d9/67/09d967920db4d5d77f818d86493366bb.jpg");
 }
 
+#navBarColor{
+    background-color: black;
+}
+
+#showUserName{
+    color:white;
+}
+
 #signUpButton,
 #linkToLogIn,
 #linkToFavs{

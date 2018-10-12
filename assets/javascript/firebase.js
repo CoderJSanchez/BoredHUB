@@ -34,14 +34,28 @@
     //allows firebase time to log in the user
     setTimeout(returnHome, 2000);  
   });
-  //allows the page to return to index signed in
-  function returnHome(){
-      if(passTxt.val().length >= 6){
+//   //allows the page to return to index signed in
+//   function returnHome(){
+//       if(passTxt.val().length >= 6){
+//         window.location.href = 'index.html';
+//       }else{
+//           alert("password not long enough");
+//       }    
+//   }
+
+  //TEST
+//allows the page to return to index signed in
+function returnHome() {
+    if (passTxt.val().length < 6) {
+        $('#errorText').removeClass('invisible');
+    } else {
         window.location.href = 'index.html';
-      }else{
-          alert("password not long enough");
-      }    
-  }
+
+    }
+}
+
+
+
 
   //add signup event
   subBtn.on('click', function(e){
