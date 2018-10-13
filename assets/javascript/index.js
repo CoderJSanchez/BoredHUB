@@ -12,6 +12,9 @@ var hasPrevToken = false;
 var giphyAPI = "https://api.giphy.com/v1/gifs/trending?api_key=fDL5v4XFp5pWQ4sKnSa55JNFVuzF0LSq&limit=3";
 var giphyAPIWithOffset = giphyAPI;
 var offset = 0;
+var usernameTxt = "signmeUP";
+
+var db = firebase.database();
 
 function YTinit() {
     $.ajax({
@@ -98,10 +101,30 @@ function giphyInit() {
         method: 'GET'
     }).then(function(response) {
         for(let i = 0; i < 3; i++) {
+            let container = $("<div>");
+            $(container).attr("class", "image-holder");
             let image = $("<img>");
             $(image).attr("src", response.data[i].images.fixed_height.url);
             $(image).attr("alt", "Hilarious GIF!");
-            $("#images").append(image);
+            $(container).append(image);
+
+            let br = $("<br>");
+            $(container).append(br);
+
+            let button = $("<button>");
+            $(button).attr("class", "btn btn-success fav");
+            $(button).attr("data-sauce", response.data[i].images.fixed_height.url);
+            $(button).text("Favorite");
+            $(container).append(button);
+
+            $("#images").append(container);
+
+            $(".fav").on("click", function(){
+                let fav = $(this).attr("data-sauce");
+                //console.log(usernameTxt);
+                db.ref("users/" + usernameTxt).child("favorites").push(fav);
+                    //console.log(this.ref);
+            });
         }
     });
 }
@@ -116,10 +139,30 @@ function plusGSlides() {
     }).then(function(response) {
         $("#images").empty();
         for(let i = 0; i < 3; i++) {
+            let container = $("<div>");
+            $(container).attr("class", "image-holder");
             let image = $("<img>");
             $(image).attr("src", response.data[i].images.fixed_height.url);
             $(image).attr("alt", "Hilarious GIF!");
-            $("#images").append(image);
+            $(container).append(image);
+
+            let br = $("<br>");
+            $(container).append(br);
+
+            let button = $("<button>");
+            $(button).attr("class", "btn btn-success fav");
+            $(button).attr("data-sauce", response.data[i].images.fixed_height.url);
+            $(button).text("Favorite");
+            $(container).append(button);
+
+            $("#images").append(container);
+
+            $(".fav").on("click", function(){
+                let fav = $(this).attr("data-sauce");
+                //console.log(usernameTxt);
+                db.ref("users/" + usernameTxt).child("favorites").push(fav);
+                    //console.log(this.ref);
+            });
         }
 
         
@@ -136,13 +179,31 @@ function minusGSlides() {
         }).then(function(response) {
             $("#images").empty();
             for(let i = 0; i < 3; i++) {
+                let container = $("<div>");
+                $(container).attr("class", "image-holder");
                 let image = $("<img>");
                 $(image).attr("src", response.data[i].images.fixed_height.url);
                 $(image).attr("alt", "Hilarious GIF!");
-                $("#images").append(image);
+                $(container).append(image);
+    
+                let br = $("<br>");
+                $(container).append(br);
+    
+                let button = $("<button>");
+                $(button).attr("class", "btn btn-success fav");
+                $(button).attr("data-sauce", response.data[i].images.fixed_height.url);
+                $(button).text("Favorite");
+                $(container).append(button);
+    
+                $("#images").append(container);
+    
+                $(".fav").on("click", function(){
+                    let fav = $(this).attr("data-sauce");
+                    //console.log(usernameTxt);
+                    db.ref("users/" + usernameTxt).child("favorites").push(fav);
+                        //console.log(this.ref);
+                });
             }
-
-            
         });
     }
 }
@@ -165,3 +226,4 @@ $("#Gnext").on("click", function() {
 $("#Gprev").on("click", function() {
     minusGSlides();
 });
+

@@ -1,9 +1,9 @@
   var db = firebase.database();
-  var email = "myfancyemail@gmailDOTcom";
+  var usernameTxt = "signmeUP";
 
   db.ref().on("value", function(snapshot) {
     //$("#favs").empty(); 
-    var favorites = snapshot.child("users/" + email + "/favorites").val();
+    var favorites = snapshot.child("users/" + usernameTxt + "/favorites").val();
      console.log(favorites);
     for(var sha in favorites) {
         //console.log(favorites[sha]);
